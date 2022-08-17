@@ -1,0 +1,126 @@
+.heros{
+    background-color:  #F0EEEB;
+    padding: 10px 10px 50px 10px;
+
+    .hero{
+        display: flex;
+        justify-content: space-between;
+        padding-top: 5px;
+        flex-wrap: wrap-reverse;
+        align-items: center;
+        
+        
+        &__text{
+            text-align: left;
+            flex: 1 0 50%;
+            
+
+            h1{
+                font-size: xx-large;
+                font-weight: 600;
+
+                @include breakpoint-up(large){
+                    font-size: xxx-large;
+                }
+            }
+
+            p{
+                font-size: 14px;
+                line-height: 1.3;
+                width: 80%;
+
+                @include breakpoint-up(large){
+                    font-size: large;
+                }
+            }
+
+            input{
+                height: 44px;
+                border-radius: 3px;
+                border: 1px gray solid;
+                padding: 0 auto;
+            }
+
+            .black-btn{
+                background-color: black;
+                color: #F0EEEB;
+                margin-left: 10px;
+                padding: 12px 9px 15px 9px;
+                border-radius: 4px;
+                transition: all 300ms ease-in-out;
+                display: inline-block;
+                
+                a{
+                    color: white;
+                    text-decoration: none;
+                    font-size: medium;
+                    font-weight: 400;
+                }
+                &:hover{
+                    opacity: 0.7;
+                }
+            }
+
+            ul{
+                transform: translateX(-10px);
+                li{
+                    list-style-type: none;
+                    font-weight: 600;
+                    font-size: medium;
+                    position: relative;
+                    line-height: 1.6;
+                    
+                    &::before{
+                        content: "";
+                        width: 20px;
+                        height: 20px;
+                        left: -30px;
+                        top: 3px;
+                        background: url("/images/Checkmark.svg");
+                        background-position: center;
+                        position: absolute;
+                        border-radius: 50%;
+                        
+
+                    }
+                }
+            }
+        }
+
+        &__image{
+            flex-basis:100%;
+            text-align: center;
+            width: 100%;
+            
+
+            .mobile{      
+                height: 300px;
+                width: 100%;
+            }
+
+            .tab{
+                width: 100%;
+                min-height: 250px;
+                max-height: 350px;
+                
+            }
+
+            .desktop{
+                width: 80%;
+                min-height: 300px;
+                
+            }
+
+            @include breakpoint-up(large){
+                width: 40%;
+                text-align: right;
+                flex-basis: 40%;
+            }    
+
+            @include breakpoint-up(medium){
+                //text-align: center;
+                
+            }    
+        }
+    }
+}

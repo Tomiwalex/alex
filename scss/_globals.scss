@@ -1,0 +1,28 @@
+html{
+    font-size: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    
+}
+
+body{
+   
+    font-family:'public sans', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+    min-height: 200vh;
+    
+}
+
+.container{
+
+    max-width: 1113px;
+    margin: 0 auto;
+    padding: 15px;
+
+    @include breakpoint-up(medium){
+        padding: 0;
+    }
+}
+
+// 

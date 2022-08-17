@@ -1,0 +1,44 @@
+.slide-in{
+    animation: s-i 300ms ease-in-out forwards;
+}
+
+.slide-out{
+    animation: slid 300ms ease-in-out forwards;
+}
+
+@keyframes s-i {
+    from{
+        visibility: hidden;
+    }
+
+    1%{
+    transform: translateX(-100%);
+    
+    }
+    20%{
+    transform: translateX(-80%);
+
+    }
+
+    to{
+        transform: none;
+        visibility: visible;
+    }
+}
+
+@keyframes slid {
+    from{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    99%{
+        transform: translateX(-100%);
+        
+    }
+
+
+    to{
+        visibility: hidden;
+    }
+}
